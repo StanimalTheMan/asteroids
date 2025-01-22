@@ -17,12 +17,12 @@ def main():
             if event.type == pygame.QUIT:
                 return
         
-        for player in updatable:
-            player.update(dt)
+        for obj in updatable:
+            obj.update(dt)
 
         screen.fill(color="black")
-        for player in drawable:
-            player.draw(screen)
+        for obj in drawable:
+            obj.draw(screen)
 
         pygame.display.flip()
         dt = clock.tick(60) / 1000      
